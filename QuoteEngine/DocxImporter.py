@@ -1,24 +1,24 @@
 from typing import List
 import docx
 
-from .ImportInterface import ImportInterface
-from .Cat import Cat
+from .IngestorInterface import IngestorInterface
+from .QuoteModel import QuoteModel
 
-class DocxImporter(ImportInterface):
+class DocxImporter(IngestorInterface):
     allowed_extensions = ['docx']
     
     @classmethod
-    def parse(cls, path: str) -> List[Cat]:
+    def parse(cls, path: str) -> List[QuoteModel]:
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
             
-        cats = []
+        quotes = []
         doc = docx.Document(path)
         
         for para in doc.paragraphs:
             if para.text != "":
-                parsed = para.text.split(',')
-                new_cat = Cat(parsed[0], int(parsed[1]), bool(parsed[2]))
-                cats.append(new_cat)
+                parsed = para.text.split('-').replace(" ", "")
+                new_quote = QuoteModel(parsed[0], parsed[1])
+                quotes.append(new_quote)
                 
-        return cats
+        return quotes

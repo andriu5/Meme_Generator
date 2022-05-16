@@ -1,13 +1,10 @@
 class QuoteModel():
-    def __init__(self, quote, author):
-        self.quote = quote
+    def __init__(self, body, author):
+        self.body = body
         self.author = author
-
-    def speak(self):
-        print(f'rrr"')
     
     def __repr__(self):
-        return f'<QuoteModel Object: {self.quote}, {self.author}>'
+        return f'<QuoteModel Object: {self.body}, {self.author}>'
 
     def __str__(self):
-        return f'"{self.quote}" by {self.author}.'
+        return f'"{self.body}" by {self.author}.'
