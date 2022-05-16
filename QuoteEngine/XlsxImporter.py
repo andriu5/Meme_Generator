@@ -17,7 +17,11 @@ class XlsxImporter(IngestorInterface):
         df = pandas.read_excel(path, sheet_name=0, keep_default_na=False, header=0)
 
         for index, row in df.iterrows():
-            new_quote = QuoteModel(row['body'], row['author'])
-            quotes.append(new_quote)
+            try:
+                new_quote = QuoteModel(row['body'], row['author'])
+            except Exception as e:
+                print("Line not parsed from Excel spreadsheet due to: "+str(e))
+            else: 
+                quotes.append(new_quote)
         
         return quotes

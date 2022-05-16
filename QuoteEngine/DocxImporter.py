@@ -16,9 +16,13 @@ class DocxImporter(IngestorInterface):
         doc = docx.Document(path)
         
         for para in doc.paragraphs:
-            if para.text != "":
-                parsed = para.text.split('-').replace(" ", "")
-                new_quote = QuoteModel(parsed[0], parsed[1])
+            try:
+                if para.text != "":
+                    parsed = para.text.split('-')
+                    new_quote = QuoteModel(parsed[0].strip(), parsed[1].strip())
+            except Exception as e:
+                print("Line not parsed from DOCX due to: "+str(e))
+            else: 
                 quotes.append(new_quote)
                 
         return quotes

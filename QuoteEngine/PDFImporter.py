@@ -21,10 +21,15 @@ class PDFImporter(IngestorInterface):
         quotes = []
         
         for line in file_ref.readlines():
-            line = line.strip('\n\r').replace(" ", "")
-            if len(line) > 0:
-                parse = line.split('-')
-                new_quote = QuoteModel(parse[0], parse[1])
+            try:
+                line = line.strip('\n\r')
+                if len(line) > 0:
+                    parse = line.split('-')
+                    # print(f"parse: {parse}")
+                    new_quote = QuoteModel(parse[0].strip(), parse[1].strip())
+            except Exception as e:
+                print("Line not parsed from PDF due to: "+str(e))
+            else: 
                 quotes.append(new_quote)
                 
         file_ref.close()
