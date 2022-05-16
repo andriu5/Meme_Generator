@@ -36,8 +36,13 @@ The DocxImporter class is responsible for loading data from Docx (Microsoft Word
 
 ### Dependencies: 
 
-1. Before explore the code prepare a virtual environment using Python3.6+. Then proceed to install all the dependencies specified in the file requirements.txt.
-1. pdftotext: Converts pdf to text (.pdf to .txt):
+1. Before implementing our code, we need to install the python-docx library to work with word documents in Python. This library requires a new version of a Python helper module called setuptools. To install the updated helper and the docx library, run:
+```sh
+pip install -U setuptools
+pip install python-docx
+```
+2. Before explore the code prepare a virtual environment using Python3.6+. Then proceed to install all the dependencies specified in the file requirements.txt.
+3. pdftotext: Converts pdf to text (.pdf to .txt):
     - installation:
         - sudo apt install poppler-utils (Linux)
         - brew install poppler           (MacOS)
