@@ -85,7 +85,7 @@ python3 meme.py --author Andres --body "I DONT ALWAYS MAKE MEMES, BUT WHEN I DO 
 
 You'll see the following output:
 
-<img src="./imgs/meme-959529.png" style="width=50%">
+<img src="./imgs/meme-692580.png" style="width=50%">
 
 # Flask App:
 
