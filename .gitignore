@@ -136,3 +136,5 @@ dmypy.json
 
 # memes
 static/*.png
+
+.DS_Store
