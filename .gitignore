@@ -2,6 +2,8 @@
 .vscode
 .vscode/*.json
 
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -135,6 +137,9 @@ dmypy.json
 
 
 # memes
-static/*.png
-
-.DS_Store
+# static/*.png
+static/*.jpg
+static/*.jpeg
+tmp/*.png
+tmp/*.jpg
+tmp/*.jpeg

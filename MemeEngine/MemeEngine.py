@@ -65,14 +65,15 @@ class MemeGenerator():
         new_meme = self.crop_image(in_path, width)
 
         draw = ImageDraw.Draw(new_meme)
-
-        # Wrap the text
+        
+        # Fonts
         try:
             font = ImageFont.truetype(
                             cf.SERVER_PATH+'/_data/fonts/impact/impact.ttf',
                             size=int(new_meme.size[1]/15))
         except Exception:
             raise OSError('Invalid font path')
+        # Wrap the text
         char_width, char_height = font.getsize('A')
 
         char_per_line = int(width/char_width)

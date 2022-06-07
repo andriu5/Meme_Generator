@@ -91,3 +91,14 @@ You'll see the following output:
 
 Example:
 
+Hi mentors,
+
+Could you please help me to resolve the following problem that occurs when I fill the form to creates a meme? I got a little bit stuck, so please provide hints and as much help as possible.
+
+I'm facing problems with Pillow, I followed all the instructions provided: I mean installed a virtual environment, I'm using python 3.10 and all the libraries suggested in the course. However, it seems that there's something wrong with the library.
+
+
+
+
+Cheers,
+Andrés

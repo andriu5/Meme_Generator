@@ -88,14 +88,13 @@ def meme_post():
     num=random.randrange(1,1000000)
     extension = image_url.split('.')[-1]
     temp = cf.SERVER_PATH+cf.TMP_PATH+'tmp-{}.{}'.format(str(num),extension)
-    with open(temp, 'wb') as handle:
-        response = requests.get(image_url, stream=True)
-        if not response.ok:
-            print(response)
-            abort(response.status_code)
-        handle.write(response.content)
+    
+    response = requests.get(image_url)
+    if response.status_code == 200:
+        with open(temp, 'wb') as f:
+            f.write(response.content)
 
-    path = meme.make_meme(request.form['image_url'], request.form['body'], request.form['author'])
+    path = meme.make_meme(temp, body, author)
 
     os.remove(temp)
 
