@@ -137,7 +137,7 @@ dmypy.json
 
 
 # memes
-# static/*.png
+static/*.png
 static/*.jpg
 static/*.jpeg
 tmp/*.png
