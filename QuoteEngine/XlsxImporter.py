@@ -10,6 +10,7 @@ class XlsxImporter(IngestorInterface):
     
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """ Parse a text Quote of the form body, author """
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
         

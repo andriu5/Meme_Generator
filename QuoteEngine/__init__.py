@@ -4,3 +4,4 @@ from .TxtImporter import TxtImporter
 from .DocxImporter import DocxImporter
 from .PDFImporter import PDFImporter
 from .Ingestor import Ingestor
+from .QuoteModel import QuoteModel

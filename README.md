@@ -30,7 +30,7 @@ The Importer class encapsulates the CSVImporter, XlsImporter, XlsxImporter, Docx
 
 In Figure 1 is presented the class diagrams that describes the implementation of the strategy objects. 
 
-<img src="./imgs/classDiagram_ImporterInterface.png">
+<img src="./imgs/classDiagram_IngestorInterface.png">
 
 The DocxImporter class is responsible for loading data from Docx (Microsoft Word Document) files, the CSVImporter class is responsible for loading data from CSV (Comma Separated Value) files, and the same idea applies for the file types xls, xlsx, txt, pdf.
 
@@ -50,3 +50,44 @@ pip install python-docx
     ```sh
     $ pdftotext cats.pdf cats.txt
     ```
+
+## Iniciar el servidor de Flask para testing:
+
+El proyecto contiene un código de inicio de app de Flask en app.py.
+
+Para iniciar el servidor de Flask, ejecute en su maquina:
+
+```py
+export PYTHONPATH="${PYTHONPATH}:/<path_completo>/integraciones_campanas_macropay"
+export FLASK_APP=app.py
+export FLASK_ENV=development
+export FLASK_DEBUG=1
+flask run --host 127.0.0.1 --port 5000 --reload --debugger
+```
+
+> **Nota:** el host y el puerto son necesarios para acceder al servidor de forma local. Debe agregar al PYTHONPATH la ruta de su repo local donde van a correr los tests.
+
+## Unit Tests del MicroServicio Integraciones:
+
+El proyecto cuenta con unit tests para validar que el funcionamiento de cada una de sus funciones y métodos funcionan de acuerdo con lo requerido:
+
+```py
+$ python3 -m unittest --verbose
+```
+
+# CLI:
+
+Example, execute the following command in your terminal:
+
+```py
+python3 meme.py --author Andres --body "I DONT ALWAYS MAKE MEMES, BUT WHEN I DO I USE PYTHON" --path ./_data/photos/old_school/idontalways.jpeg
+```
+
+You'll see the following output:
+
+<img src="./imgs/meme-959529.png" style="width=50%">
+
+# Flask App:
+
+Example:
+
