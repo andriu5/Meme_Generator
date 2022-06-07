@@ -51,11 +51,11 @@ pip install python-docx
     $ pdftotext cats.pdf cats.txt
     ```
 
-## Iniciar el servidor de Flask para testing:
+## run the Flask server for testing:
 
-El proyecto contiene un código de inicio de app de Flask en app.py.
+The project contains Flask app startup code in app.py.
 
-Para iniciar el servidor de Flask, ejecute en su maquina:
+To start the Flask server, run on your machine:
 
 ```py
 export PYTHONPATH="${PYTHONPATH}:/<path_completo>/integraciones_campanas_macropay"
@@ -65,11 +65,11 @@ export FLASK_DEBUG=1
 flask run --host 127.0.0.1 --port 5000 --reload --debugger
 ```
 
-> **Nota:** el host y el puerto son necesarios para acceder al servidor de forma local. Debe agregar al PYTHONPATH la ruta de su repo local donde van a correr los tests.
+> **Note:** the host and port are required to access the server locally. You must add to the `PYTHONPATH` the path of your local repo where the tests will be run.
 
-## Unit Tests del MicroServicio Integraciones:
+## Unit Tests:
 
-El proyecto cuenta con unit tests para validar que el funcionamiento de cada una de sus funciones y métodos funcionan de acuerdo con lo requerido:
+The project has unit tests to validate that the functions and methods works as required:
 
 ```py
 $ python3 -m unittest --verbose
@@ -89,16 +89,15 @@ You'll see the following output:
 
 # Flask App:
 
-Example:
+Example, fill the following form and submit it:
 
-Hi mentors,
+<img src="./imgs/form_data_to_create_meme_using_url.png" style="width=50%">
 
-Could you please help me to resolve the following problem that occurs when I fill the form to creates a meme? I got a little bit stuck, so please provide hints and as much help as possible.
+You'll see the following output, after click in the `Create Meme!` button:
 
-I'm facing problems with Pillow, I followed all the instructions provided: I mean installed a virtual environment, I'm using python 3.10 and all the libraries suggested in the course. However, it seems that there's something wrong with the library.
-
-
+<img src="./imgs/meme_using_creator_button.png" style="width=50%">
 
 
+#### 
 Cheers,
 Andrés
