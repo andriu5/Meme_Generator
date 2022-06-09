@@ -19,25 +19,25 @@ This module will be composed of many classes and will demonstrate your understan
 
 #### 2.1.1 Quote Format
 
-Example quotes are provided in a variety of files. Take a moment to review the file formats in ./_data/SimpleLines and ./_data/DogQuotes. Your task is to design a system to extract each quote line-by-line from these files.
+Example quotes are provided in a variety of files. Take a moment to review the file formats in ./_data/SimpleLines and ./_data/DogQuotes. QuoteEngine module is designed as a system to extract each quote line-by-line from these files.
 
-The abstrat class ImporterInterface implements the can_ingest class method which decides if a file is compatible with the importer.
+The abstrat class `IngestorInterface` implements the can_ingest class method which decides if a file is compatible with the importer.
 
 A parse abstract class method signature, fully complete in the children classes that implement the ImporterInterface.
 
-The Importer class encapsulates the CSVImporter, XlsImporter, XlsxImporter, DocxImporter, TxtImporter, and the PDFImporter classes.
+The `Ingestor` class encapsulates the `CSVImporter`, `XlsImporter`, `XlsxImporter`, `DocxImporter`, `TxtImporter`, and the `PDFImporter` classes.
 
 In Figure 1 is presented the class diagrams that describes the implementation of the strategy objects. 
 
 <img src="./imgs/classDiagram_IngestorInterface.png">
 
-The DocxImporter class is responsible for loading data from Docx (Microsoft Word Document) files, the CSVImporter class is responsible for loading data from CSV (Comma Separated Value) files, and the same idea applies for the file types xls, xlsx, txt, pdf.
+The `DocxImporter` class is responsible for loading data from Docx (Microsoft Word Document) files. The `CSVImporter` class is responsible for loading data from CSV (Comma Separated Value) files, and the same idea applies for the file types xls, xlsx, txt, pdf.
 
 ### 2.2 Meme Engine
 
-The Meme Engine module is responsible for generating memes.
+The `MemeEngine` module is responsible for generating memes.
 
-This module is composed by MemeGenerator class that creates a meme using a given image adding a quote and a quote author to the image. 
+This module is composed by `MemeGenerator` class that creates a meme using a given image adding a quote and a quote author to the image. 
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 3. Installation of the project: 
