@@ -59,11 +59,15 @@ pip install -r requirements.txt
     ```sh
     $ pdftotext cats.pdf cats.txt
     ```
-4. Add the .env file to the ./libs directory.
+4. Activate the virtual environment:
+```sh
+source venv/bin/activate
+```
+5. Add the .env file to the ./libs directory.
 ```sh
 $ cp -f libs/.env.example libs/.env
 ```
-5. Run the project:
+6. Run the project:
 ```sh
 $ python3 meme.py
 ```
@@ -133,8 +137,6 @@ Example, fill the following form and submit it:
 You'll see the following output, after click in the `Create Meme!` button:
 
 <img src="./imgs/meme_using_creator_button.png" style="width=50%">
-
-
 
 ---------------------------------------------------------------------------------------------------------------------
 Cheers,<br>
